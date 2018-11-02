@@ -1,0 +1,260 @@
+A
+1.
+class Animal {
+void walk(){         
+System.out.println("I am walking");     
+}
+ }
+class Bird extends Animal {    
+ void fly() {         
+System.out.println("I am flying");     
+} 
+void sing() {
+System.out.println("I am Singing");     
+} }
+ public class Solution {    
+ public static void main(String[] args) {        
+ Bird bird = new Bird();        
+ bird.walk();        
+ bird.fly();        
+ bird.sing();     
+} 
+}
+a)	Only if you override the method , write a unit test.
+Test each class/method, Through JUnit which can build and run unit tests.
+b)	Code should be clean with best practice in software development.Leave the code in better condition so next developer can easily understand.
+Test Driven Development is great for maintaining code & Peer review of code.
+
+2) class Animal {
+void walk(){         
+System.out.println("I am walking");     
+}
+ }
+class Bird extends Animal {    
+ void fly() {         
+System.out.println("I am flying");     
+} 
+void sing() {
+System.out.println("I am Singing");     
+} }
+class Duck extends Bird {    
+duck(){
+System.out.println("Quack, quack");     
+}
+ void swim() {         
+System.out.println("A duck can swim ");     
+} }
+class Chicken extends Bird {    
+Chicken ()
+System.out.println("Cluck, cluck ");     
+}
+ void cannotfly() {         
+System.out.println("A chicken cannot fly ");     
+} }
+ public class Solution {    
+ public static void main(String[] args) {        
+ Duck duck = new Duck ();        
+ duck.swim();        
+ Chicken ch = new Chicken();
+Ch.cannotfly();
+} 
+}
+
+3) public Interface Chicken{
+System.out.println("Cluck, cluck");     
+void cannotfly()          
+} 
+Public class Rooster implements Chicken{   //c. Use interface 
+Class Rooster()
+System.out.println("Cock-a-doodle-doo");     // a. A rooster says: “Cock-a-doodle-doo”
+void cannotfly() {         
+System.out.println("A chicken cannot fly ");     //b. rooster and chicken both cannot fly  its wings are clipped
+} }
+ public class Solution {    
+ public static void main(String[] args) {        
+ Rooster rs = new Rooster ();        
+ rs. cannotfly ();        
+ } 
+}
+4)public Interface Parrot{
+public void noise();
+}
+public class Dog implements Parrot { //a) a. A parrot living with dogs says: “Woof, woof”
+public void noise(){
+System.out.println("Woof, woof");     
+}}
+public class Cat implements Parrot { //b) A parrot living with cats says: “Meow”
+public void noise(){
+System.out.println("Meow");     
+}}
+public class Rooster implements Parrot { //c) A parrot living near the rooster says: “Cock-a-doodle-doo”
+public void noise(){
+System.out.println("Cock-a-doodle-doo");     
+}}
+public class Solution {    
+ public static void main(String[] args) {        
+ Parrot pt = new Parrot ();        
+ pt. noise ();        
+ } 
+}
+
+B)
+1)
+class Animal {
+void walk(){         
+System.out.println("I am walking");     
+}
+ }
+class Bird extends Animal {    
+ void fly() {         
+System.out.println("I am flying");     
+} 
+void sing() {
+System.out.println("I am Singing");     
+} }
+class Fish extends Animal {    
+void donsing() {
+System.out.println("Fishes don’t sing ");     
+}
+ void donwalk() {         
+System.out.println("Fishes don’t walk ");     
+} 
+void swim() {         
+System.out.println("Fishes can swim ");     
+} 
+}
+
+ public class Solution {    
+ public static void main(String[] args) {        
+ Bird bird = new Bird();        
+ bird.walk();        
+ bird.fly();        
+ bird.sing();     
+Fish fish = new Fish();
+fish. donsing();
+fish. donwalk();
+fish.swim();
+} 
+}
+2)
+public Interface Fish{
+public String getName();
+public void shape();
+public void info();
+}
+public class Sharks implements Fish { 
+private String name;
+
+    public Sharks(String name) {
+        this.name = name;
+    }
+    public String getName() {
+        return name;
+    }
+public void shape (){
+System.out.println("Sharks are large and grey ");     
+}
+public void info (){
+System.out.println("Sharks eat other fish ");     
+}}
+public class Clownfish implements Parrot { 
+private String name;
+
+    public Clownfish (String name) {
+        this.name = name;
+    }
+    public String getName() {
+        return name;
+    }
+public void shape (){
+System.out.println("Clownfish are small and colourful ");     
+}
+public void info (){
+System.out.println("Clownfish make jokes  ");     
+}}
+public class Solution {    
+ public static void main(String[] args) {        
+Fish f;
+f=new Sharks(“Shark”);
+f.shape();
+f.info();
+ f = new Clownfish (“Clownfish”);        
+ f. shape ();       
+f.info(); 
+ } 
+}
+
+3)
+Class Dolphin{
+Fish fish;
+Dolphin(Fish fish){
+this.fish=fish;
+}
+Void swim(){
+System.out.println("Dolphins can swim ");   }}
+  public class Solution {    
+ public static void main(String[] args) {        
+ Dolphin dp = new Dolphin();        
+ Dp.swim();
+}}
+D.
+1) class Animal {
+void walk(){         
+System.out.println("I am walking");     
+}
+ }
+class Bird extends Animal {    
+ void fly() {         
+System.out.println("I am flying");     
+} 
+void sing() {
+System.out.println("I am Singing");     
+} }
+class Butterfly extends Bird {    
+ void fly() {         
+System.out.println("I am flying");     
+} 
+void mute() {
+System.out.println("A butterfly does not make a sound ");     } }
+ public class Solution {    
+ public static void main(String[] args) {        
+ Butterfly butterfly = new Butterfly t();        
+butterfly.fly();        
+ butterfly.mute();     
+} 
+}
+2)
+public Interface Catterpillar{
+public void cannotfly();
+public void crawl();
+}
+public Interface Butterfly{
+public void fly();
+public void mute();
+}
+Class Bird implements Catterpillar,Butterfly{
+public void cannotfly(){
+System.out.println("A caterpillar cannot fly");  
+}
+public void crawl(){
+System.out.println("A caterpillar can walk");  
+}
+public void fly(){
+System.out.println("Butterfly can fly ");  
+}
+public void mute(){
+System.out.println("A butterfly does not make a sound ");  
+}}
+public class Solution {    
+ public static void main(String[] args) {        
+Bird bird=new Bird();
+bird.cannotfly();
+bird.crawl();
+bird.fly();
+bird.mute();
+ } 
+}
+
+Bonus:
+class Rooster
+
