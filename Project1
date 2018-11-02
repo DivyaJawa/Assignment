@@ -64,7 +64,7 @@ Ch.cannotfly();
 System.out.println("Cluck, cluck");     
 void cannotfly()          
 } 
-Public class Rooster implements Chicken{   //c. Use interface 
+Public class Rooster implements Chicken{   
 Class Rooster()
 System.out.println("Cock-a-doodle-doo");     // a. A rooster says: “Cock-a-doodle-doo”
 void cannotfly() {         
@@ -76,6 +76,22 @@ System.out.println("A chicken cannot fly ");     //b. rooster and chicken both c
  rs. cannotfly ();        
  } 
 }
+
+c. without using inheritance. Super class
+Class Rooster{
+Bird bird;
+Rooster(Bird bird){
+this.bird=bird;
+}
+Void noise(){
+System.out.println("Cock-a-doodle-doo ");   
+}}
+  public class Solution {    
+ public static void main(String[] args) {        
+ Rooster rs = new Rooster();        
+ rs.noise();
+}}
+
 4)public Interface Parrot{
 public void noise();
 }
@@ -136,6 +152,7 @@ fish. donwalk();
 fish.swim();
 } 
 }
+
 2)
 public Interface Fish{
 public String getName();
@@ -197,8 +214,10 @@ System.out.println("Dolphins can swim ");   }}
  Dolphin dp = new Dolphin();        
  Dp.swim();
 }}
+
 D.
-1) class Animal {
+1) 
+class Animal {
 void walk(){         
 System.out.println("I am walking");     
 }
@@ -223,6 +242,7 @@ butterfly.fly();
  butterfly.mute();     
 } 
 }
+
 2)
 public Interface Catterpillar{
 public void cannotfly();
@@ -256,5 +276,85 @@ bird.mute();
 }
 
 Bonus:
-class Rooster
+class Rooster{
+void nativeSound(String sound){
+switch(sound){
+case "Danish" :
+System.out.println("kykyliky");
+break;
+case "Dutch" :
+System.out.println("kukeleku");
+break;
+case "Finnish" :
+System.out.println(" kukko kiekuu ");
+break;
+case "French" :
+System.out.println("cocorico ");
+break;
+case "German" :
+System.out.println("kikeriki ");
+break;
+case "Greek" :
+System.out.println("kikiriki ");
+break;
+case "Hebrew" :
+System.out.println("coo-koo-ri-koo ");
+break;
+case "Hungarian" :
+System.out.println("kukuriku ");
+break;
+case "Italian" :
+System.out.println("chicchirichi ");
+break;
+case "Japanese" :
+System.out.println("ko-ke-kok-ko-o");
+break;
+case "Portuguese" :
+System.out.println("cucurucu ");
+break;
+case "Russian" :
+System.out.println("kukareku ");
+break;
+case "Swedish" :
+System.out.println("kuckeliku ");
+break;
+case "Turkish" :
+System.out.println("kuk-kurri-kuuu ");
+break;
+case "Urdu" :
+System.out.println("kuklooku ");
+break;
+default :
+System.out.println("No Sound");
+break;
+}
+}}
+public class Solution {    
+ public static void main(String[] args) {        
+  nativeSound("Danish");
+  nativeSound("Dutch");
+  nativeSound("Finnish");
+  nativeSound("French");
+  nativeSound("German");
+  nativeSound("Greek");
+  nativeSound("Hebrew");
+  nativeSound("Hungarian");
+  nativeSound("Italian");
+  nativeSound("Japanese");
+  nativeSound("Portuguese");
+  nativeSound("Russian");
+  nativeSound("Swedish");
+  nativeSound("Turkish");
+  nativeSound("Urdu");
+ }
+ }
 
+ RESTful API for querying these animals
+<animals>
+    <animal type="fish" href="/animals/321">
+    <name>Sharks</name>
+    <color>grey</color>
+    <size>large</size>
+    <food>other fish</food>
+  </animal>
+</animals>
